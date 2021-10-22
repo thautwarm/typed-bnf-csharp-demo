@@ -28,8 +28,8 @@ shape token {
 typealias list = System.Collections.Generic.List
 typealias dict = System.Collections.Generic.Dictionary
 
-// Some declarations. they specifies what you need to
-// provide for generating this parser.
+// Some declarations. They will specify what you need
+// to provide for compiling this grammar.
 val nil : forall 'a. () -> list['a]
 val append : forall 'a. (list['a], 'a) -> list['a]
 val mk_dict: forall 'k 'v. (list[('k, 'v)]) -> dict['k, 'v]
