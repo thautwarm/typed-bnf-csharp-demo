@@ -46,7 +46,7 @@ val json_null : () -> json
 start : json      { $1 }
 
 
-// parametric rules!
+// parametric nonterminal rules!
 list[a] : list[a] a     { append($1, $2) }
         | a { append(nil(), $1) }
         |  { nil() }
