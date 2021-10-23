@@ -5,8 +5,10 @@ shape token {
 // Using type alias is a workaround for C# codegen.
 // C# has no type alias so we cannot refer to types
 // via language-independent names.
-typealias list = System.Collections.Generic.List
-typealias dict = System.Collections.Generic.Dictionary
+
+    typealias list = System.Collections.Generic.List
+    typealias dict = System.Collections.Generic.Dictionary
+
 
 // Some declarations. they specifies what you need to
 // provide for generating this parser.
@@ -23,7 +25,7 @@ val json_float : (float) -> json
 val json_string : (str) -> json
 val json_null : () -> json
 
-start : json      { $1 }
+start : json <EOF>      { $1 }
 
 
 // parametric rules!

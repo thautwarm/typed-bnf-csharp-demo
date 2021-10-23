@@ -19,6 +19,7 @@
 // Ambiguous reference in cref attribute
 #pragma warning disable 419
 
+namespace testjson {
 using System;
 using System.IO;
 using System.Text;
@@ -576,6 +577,7 @@ public partial class testjsonParser : Parser {
 	public partial class StartContext : ParserRuleContext {
 		public json result;
 		public JsonContext local__1_start_case0;
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Eof() { return GetToken(testjsonParser.Eof, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public JsonContext json() {
 			return GetRuleContext<JsonContext>(0);
 		}
@@ -604,6 +606,7 @@ public partial class testjsonParser : Parser {
 			EnterOuterAlt(_localctx, 1);
 			{
 			State = 75; _localctx.local__1_start_case0 = json();
+			State = 76; Match(Eof);
 			 
 			        json tmp__34 ; 
 			        tmp__34 = ( json ) _localctx.local__1_start_case0.result ; 
@@ -644,7 +647,7 @@ public partial class testjsonParser : Parser {
 
 	private static char[] _serializedATN = {
 		'\x3', '\x608B', '\xA72A', '\x8133', '\xB9ED', '\x417C', '\x3BE7', '\x7786', 
-		'\x5964', '\x3', '\r', 'Q', '\x4', '\x2', '\t', '\x2', '\x4', '\x3', '\t', 
+		'\x5964', '\x3', '\r', 'R', '\x4', '\x2', '\t', '\x2', '\x4', '\x3', '\t', 
 		'\x3', '\x4', '\x4', '\t', '\x4', '\x4', '\x5', '\t', '\x5', '\x4', '\x6', 
 		'\t', '\x6', '\x4', '\a', '\t', '\a', '\x3', '\x2', '\x3', '\x2', '\x3', 
 		'\x2', '\x3', '\x2', '\x3', '\x2', '\x3', '\x2', '\x3', '\x2', '\x3', 
@@ -659,19 +662,19 @@ public partial class testjsonParser : Parser {
 		'\x4', '\x3', '\x4', '\x3', '\x4', '\a', '\x4', '\x41', '\n', '\x4', '\f', 
 		'\x4', '\xE', '\x4', '\x44', '\v', '\x4', '\x3', '\x5', '\x3', '\x5', 
 		'\x3', '\x5', '\x3', '\x5', '\x3', '\x5', '\x3', '\x6', '\x3', '\x6', 
-		'\x3', '\x6', '\x3', '\a', '\x3', '\a', '\x3', '\a', '\x3', '\a', '\x2', 
-		'\x4', '\x4', '\x6', '\b', '\x2', '\x4', '\x6', '\b', '\n', '\f', '\x2', 
-		'\x2', '\x2', 'S', '\x2', '!', '\x3', '\x2', '\x2', '\x2', '\x4', '(', 
-		'\x3', '\x2', '\x2', '\x2', '\x6', '\x39', '\x3', '\x2', '\x2', '\x2', 
-		'\b', '\x45', '\x3', '\x2', '\x2', '\x2', '\n', 'J', '\x3', '\x2', '\x2', 
-		'\x2', '\f', 'M', '\x3', '\x2', '\x2', '\x2', '\xE', '\xF', '\a', '\x3', 
-		'\x2', '\x2', '\xF', '\x10', '\x5', '\x6', '\x4', '\x2', '\x10', '\x11', 
-		'\a', '\x4', '\x2', '\x2', '\x11', '\x12', '\b', '\x2', '\x1', '\x2', 
-		'\x12', '\"', '\x3', '\x2', '\x2', '\x2', '\x13', '\x14', '\a', '\x5', 
-		'\x2', '\x2', '\x14', '\x15', '\x5', '\x4', '\x3', '\x2', '\x15', '\x16', 
-		'\a', '\x6', '\x2', '\x2', '\x16', '\x17', '\b', '\x2', '\x1', '\x2', 
-		'\x17', '\"', '\x3', '\x2', '\x2', '\x2', '\x18', '\x19', '\a', '\f', 
-		'\x2', '\x2', '\x19', '\"', '\b', '\x2', '\x1', '\x2', '\x1A', '\x1B', 
+		'\x3', '\x6', '\x3', '\a', '\x3', '\a', '\x3', '\a', '\x3', '\a', '\x3', 
+		'\a', '\x2', '\x4', '\x4', '\x6', '\b', '\x2', '\x4', '\x6', '\b', '\n', 
+		'\f', '\x2', '\x2', '\x2', 'T', '\x2', '!', '\x3', '\x2', '\x2', '\x2', 
+		'\x4', '(', '\x3', '\x2', '\x2', '\x2', '\x6', '\x39', '\x3', '\x2', '\x2', 
+		'\x2', '\b', '\x45', '\x3', '\x2', '\x2', '\x2', '\n', 'J', '\x3', '\x2', 
+		'\x2', '\x2', '\f', 'M', '\x3', '\x2', '\x2', '\x2', '\xE', '\xF', '\a', 
+		'\x3', '\x2', '\x2', '\xF', '\x10', '\x5', '\x6', '\x4', '\x2', '\x10', 
+		'\x11', '\a', '\x4', '\x2', '\x2', '\x11', '\x12', '\b', '\x2', '\x1', 
+		'\x2', '\x12', '\"', '\x3', '\x2', '\x2', '\x2', '\x13', '\x14', '\a', 
+		'\x5', '\x2', '\x2', '\x14', '\x15', '\x5', '\x4', '\x3', '\x2', '\x15', 
+		'\x16', '\a', '\x6', '\x2', '\x2', '\x16', '\x17', '\b', '\x2', '\x1', 
+		'\x2', '\x17', '\"', '\x3', '\x2', '\x2', '\x2', '\x18', '\x19', '\a', 
+		'\f', '\x2', '\x2', '\x19', '\"', '\b', '\x2', '\x1', '\x2', '\x1A', '\x1B', 
 		'\a', '\r', '\x2', '\x2', '\x1B', '\"', '\b', '\x2', '\x1', '\x2', '\x1C', 
 		'\x1D', '\x5', '\n', '\x6', '\x2', '\x1D', '\x1E', '\b', '\x2', '\x1', 
 		'\x2', '\x1E', '\"', '\x3', '\x2', '\x2', '\x2', '\x1F', ' ', '\a', '\a', 
@@ -705,8 +708,9 @@ public partial class testjsonParser : Parser {
 		'\x2', '\x2', '\x2', 'H', 'I', '\b', '\x5', '\x1', '\x2', 'I', '\t', '\x3', 
 		'\x2', '\x2', '\x2', 'J', 'K', '\a', '\n', '\x2', '\x2', 'K', 'L', '\b', 
 		'\x6', '\x1', '\x2', 'L', '\v', '\x3', '\x2', '\x2', '\x2', 'M', 'N', 
-		'\x5', '\x2', '\x2', '\x2', 'N', 'O', '\b', '\a', '\x1', '\x2', 'O', '\r', 
-		'\x3', '\x2', '\x2', '\x2', '\a', '!', '(', '\x31', '\x39', '\x42',
+		'\x5', '\x2', '\x2', '\x2', 'N', 'O', '\a', '\x2', '\x2', '\x3', 'O', 
+		'P', '\b', '\a', '\x1', '\x2', 'P', '\r', '\x3', '\x2', '\x2', '\x2', 
+		'\a', '!', '(', '\x31', '\x39', '\x42',
 	};
 
 	public static readonly ATN _ATN =
@@ -714,3 +718,4 @@ public partial class testjsonParser : Parser {
 
 
 }
+} // namespace testjson

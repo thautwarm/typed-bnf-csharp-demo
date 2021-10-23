@@ -119,7 +119,7 @@ str returns [string result] :
       } 
 ; 
 start returns [json result] :
-      local__1_start_case0=json { 
+      local__1_start_case0=json EOF { 
         json tmp__34 ; 
         tmp__34 = ( json ) _localctx.local__1_start_case0.result ; 
         $result = tmp__34; 
